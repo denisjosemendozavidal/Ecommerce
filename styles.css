@@ -78,6 +78,12 @@ a {
             width: 50%;
         }
 
+        .selected-product-dad > img {
+            width: 100%;
+            padding: 5%;
+            
+        }
+
 
         .product-list {
             width: 50%;
