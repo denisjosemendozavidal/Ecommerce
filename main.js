@@ -10,7 +10,7 @@ Burger.addEventListener("click", function () {
 
 //Slider
 
-var counter = 1;
+let counter = 1;
       setInterval(function(){
         document.getElementById('radio' + counter).checked = true;
         counter++;
