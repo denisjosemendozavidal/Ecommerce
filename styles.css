@@ -235,15 +235,28 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1%;
 }
-
-    .product-list-container > div > div > img {
-      width: 100%;
-      display: block;
+    .articule {
+      padding: 5% 10%;
+      border-radius: 8%;
+      box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+      transition: box-shadow 0.5s;
     }
 
-    .btn {
-      padding: 2.5% 3%;
-      border: none;
-      border: 2%;
-      cursor: pointer;
-    }
+      .articule:hover {
+        box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 1.15);
+      }
+
+      .product-list-container > div > div > img {
+        width: 100%;
+        display: block;
+        border-radius: 10%;
+      }
+
+      .btn {
+        padding: 2.5% 3%;
+        border: none;
+        border-radius: 10%;
+        cursor: pointer;
+        background-color: #256D85;
+        color: #fff;
+      }
