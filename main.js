@@ -28,18 +28,21 @@ const containerArticule = document.querySelector(".product-list-container");
 
 let html = "";
 
-dataDB.forEach((articule) => {
-    html += `<div class="articule">
-    <div class="articule-img">
-        <img src="#" alt="">
-    </div>
-    <div class="articule-body">
-        <h2 class="articule-body-title"></h2>
-        <p>Price</p>
-        <p>Stock</p>
-        <button class="btn btn-add">Add to Cart</button>
-    </div>
+dataDB.forEach(({id, name, price, Stock, urlImage}) => {
+    html += 
+    `<div class="articule">
+        <div class="articule-img">
+            <img src="${urlImage}" alt="">
+        </div>
+        <div class="articule-body" id="${id}">
+            <h2 class="articule-body-title">${name}</h2>
+            <p>Price: ${price}</p>
+            <p>Stock: ${Stock}</p>
+            <button class="btn btn-add">Add to Cart</button>
+        </div>
     </div>`
+
+    
 });
 
-
+containerArticule.innerHTML = html;
