@@ -184,6 +184,4 @@ export const dataDB = [
         price: ,
     },
 */
-
-
 ]

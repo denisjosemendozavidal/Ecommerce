@@ -21,16 +21,13 @@ let counter = 1;
       }, 3000);
 
 //Catalogue
-import {dataDB} from "./JS/data.js";
+import { dataDB } from "./js/data.js";
 
 
 const containerArticule = document.querySelector(".product-list-container");
 
 let html = "";
 
-
-
-/*
 dataDB.forEach((articule) => {
     html += `<div class="articule">
     <div class="articule-img">
@@ -43,7 +40,6 @@ dataDB.forEach((articule) => {
         <button class="btn btn-add">Add to Cart</button>
     </div>
     </div>`
-});*/
+});
 
 
-console.log(dataDB); 
