@@ -53,6 +53,16 @@ a {
         padding-top: 1%;
     }
 
+    .logo {
+      width: 10%;
+      height: fit-content;
+    }
+
+    .logo > img {
+          height: 10%;
+          width: 100%;
+    }
+
     .nav {
         display: flex;
         gap: 5%;
