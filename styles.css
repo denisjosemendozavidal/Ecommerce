@@ -329,6 +329,12 @@ a {
             flex-direction: column;
           }
 
+            .added-to-cart-item-options-icons > img {
+              cursor: pointer;
+            }
+
+
+
       .added-to-cart-total{
           height: 10%; 
       }

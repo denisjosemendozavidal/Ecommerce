@@ -1,4 +1,5 @@
 
+const addedToCartBody = document.querySelector(".added-to-cart-body"); //Taking this out to be able to use it in multiple functions.
 
 //the burger
 
@@ -82,8 +83,7 @@ containerArticule.addEventListener("click", (e)=>{
 
 function showingAddedItems() {
     let html = ` `;
-    const addedToCartBody = document.querySelector(".added-to-cart-body")
-
+    
     const addedItemsArray = Object.values(cart);
     console.log(addedItemsArray);
 
@@ -99,9 +99,9 @@ function showingAddedItems() {
                     <span id="amount">In stock: ${Stock}</span>
                     <span id="amount">Price: ${price}</span>
                     <div class="added-to-cart-item-options-icons">
-                        <img src="/images/plus.svg" alt="Plus-icon">
-                        <img src="/images/minus.svg" alt="Minus-icon">
-                        <img src="/images/trash.svg" alt="Trash-icon">
+                        <img class="plus-icon" src="/images/plus.svg" alt="Plus-icon">
+                        <img class="minus-icon" src="/images/minus.svg" alt="Minus-icon">
+                        <img class="trash-icon" src="/images/trash.svg" alt="Trash-icon">
                     </div>
                 </div>
             </div>
@@ -111,7 +111,20 @@ function showingAddedItems() {
     addedToCartBody.innerHTML = html;
 }
 
+//Substracting, adding and/or eliminating Items from the cart
 
+addedToCartBody.addEventListener("click", (e) => {
+    if (e.target.classList.contains("plus-icon")) {
+        console.log("Le diste al mas");
+    };
+    if (e.target.classList.contains("minus-icon")) {
+        console.log("Le diste al menos");
+    };
+    if (e.target.classList.contains("trash-icon")) {
+        console.log("Le diste a la Basura");
+    };
+
+});
 
 
 
