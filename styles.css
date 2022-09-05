@@ -176,7 +176,7 @@ a {
       }
       
       .manual-btn:hover{
-        background: var(--darwhite);
+        background: fuchsia;
       }
       
       #radio1:checked ~ .first{
@@ -272,7 +272,6 @@ a {
   .added-to-cart {
     width: 50vw;
     height: 100vh;
-    /*background-color: red;*/
     position: fixed;
     top: 0;
     right: 0;
@@ -282,6 +281,7 @@ a {
     border-top-left-radius: 10%;
     border-bottom-left-radius: 10%;
     box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 1.15);
+    padding: 5%;
   }
 
     .added-to-cart-show {
@@ -289,9 +289,11 @@ a {
     }
 
     .added-to-cart-body {
-
+        height: 90%;
+        
     }
 
     .added-to-cart-total{
-
+        height: 10%;
+        
     }
