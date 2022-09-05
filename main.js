@@ -22,6 +22,7 @@ let counter = 1;
       }, 3000);
 
 //Catalogue
+
 import { dataDB } from "./js/data.js";
 
 
@@ -57,5 +58,60 @@ const addedToCart = document.querySelector("#added-to-cart")
 cartButton.addEventListener("click", () => {
     addedToCart.classList.toggle("added-to-cart-show");
 })
+
+//Adding items to the cart
+
+let cart = {};
+
+containerArticule.addEventListener("click", (e)=>{
+    
+    if (e.target.classList.contains("btn-add")) {
+        const IdArticule = +e.target.parentElement.id;
+        
+        const findArticule = dataDB.find((articule) => articule.id === IdArticule);
+        
+        if (cart[IdArticule]) {
+            cart[IdArticule].amount++;
+        } else {
+            cart[IdArticule] = findArticule;
+            cart[IdArticule].amount= 1;  
+        }
+        showingAddedItems();
+    }
+});
+
+function showingAddedItems() {
+    let html = ` `;
+    const addedToCartBody = document.querySelector(".added-to-cart-body")
+
+    const addedItemsArray = Object.values(cart);
+    console.log(addedItemsArray);
+
+    addedItemsArray.forEach(({id, name, price, Stock, urlImage, amount}) => {
+        html += `
+            <div class="added-to-cart-item">
+                <div class="added-to-cart-item-img">
+                    <img src="${urlImage}" alt="added-to-cart-item-img">
+                </div>
+                <div class="added-to-cart-item-name">${name}</div>
+                <div class="added-to-cart-item-options" id="${id}">
+                    <span id="amount">Added to cart: ${amount}</span>
+                    <span id="amount">In stock: ${Stock}</span>
+                    <span id="amount">Price: ${price}</span>
+                    <div class="added-to-cart-item-options-icons">
+                        <img src="/images/plus.svg" alt="Plus-icon">
+                        <img src="/images/minus.svg" alt="Minus-icon">
+                        <img src="/images/trash.svg" alt="Trash-icon">
+                    </div>
+                </div>
+            </div>
+        `
+    });
+    
+    addedToCartBody.innerHTML = html;
+}
+
+
+
 
 
