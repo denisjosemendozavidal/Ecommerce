@@ -85,7 +85,7 @@ function showingAddedItems() {
     let html = ` `;
     
     const addedItemsArray = Object.values(cart);
-    console.log(addedItemsArray);
+    
 
     addedItemsArray.forEach(({id, name, price, Stock, urlImage, amount}) => {
         html += `
@@ -114,16 +114,24 @@ function showingAddedItems() {
 //Substracting, adding and/or eliminating Items from the cart
 
 addedToCartBody.addEventListener("click", (e) => {
+    
+    
     if (e.target.classList.contains("plus-icon")) {
-        console.log("Le diste al mas");
+        const idArticule = +e.target.parentElement.parentElement.id;
+        cart[idArticule].amount++;
+        
+        
+
     };
     if (e.target.classList.contains("minus-icon")) {
-        console.log("Le diste al menos");
+        const idArticule = +e.target.parentElement.parentElement.id;
+        cart[idArticule].amount--;
     };
     if (e.target.classList.contains("trash-icon")) {
         console.log("Le diste a la Basura");
     };
-
+    
+    showingAddedItems()
 });
 
 
