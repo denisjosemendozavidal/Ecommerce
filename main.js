@@ -96,8 +96,8 @@ function showingAddedItems() {
                 <div class="added-to-cart-item-name">${name}</div>
                 <div class="added-to-cart-item-options" id="${id}">
                     <span id="amount">Added to cart: ${amount}</span>
-                    <span id="amount">In stock: ${Stock}</span>
-                    <span id="amount">Price: ${price}</span>
+                    <span id="Stock">In stock: ${Stock-amount}</span>
+                    <span id="Subtotal">Subtotal:$ ${price*amount}</span>
                     <div class="added-to-cart-item-options-icons">
                         <img class="plus-icon" src="/images/plus.svg" alt="Plus-icon">
                         <img class="minus-icon" src="/images/minus.svg" alt="Minus-icon">
