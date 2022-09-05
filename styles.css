@@ -67,6 +67,7 @@ a {
         display: flex;
         gap: 5%;
         justify-content: space-evenly;
+        
     }
 
         .nav-elements-grandpa {
@@ -87,10 +88,11 @@ a {
             .burger {
                 font-size: 150%;
                 cursor: pointer;
+                
             }
 
             .cart-button {
-                
+                z-index: 1000;
             }
                 .cart-button:hover {
                     background-color: var(--fucia);
@@ -108,7 +110,8 @@ a {
         justify-content: center;
         align-items: center;
         gap: 2%;
-    }     
+    }  
+
 /*Slider*/
     .container-slider {
         width: 50%;
@@ -260,3 +263,24 @@ a {
         background-color: #256D85;
         color: #fff;
       }
+
+/*Content of the cart*/
+
+  .added-to-cart {
+    width: 50vw;
+    height: 100vh;
+    /*background-color: red;*/
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: var(--darwhite);
+    transform: translateX(100%);
+    transition: transform 0.5s;
+    border-top-left-radius: 10%;
+    border-bottom-left-radius: 10%;
+    box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 1.15);
+  }
+
+    .added-to-cart-show {
+      transform: translateX(0);
+    }

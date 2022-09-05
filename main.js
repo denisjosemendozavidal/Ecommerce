@@ -7,6 +7,7 @@ const Nav = document.querySelector("#nav-elements-grandpa");
 
 Burger.addEventListener("click", function () {
     Nav.classList.toggle("nav-elements-grandpa-show");
+    console.log("click");
 });
 
 //Slider
@@ -46,3 +47,15 @@ dataDB.forEach(({id, name, price, Stock, urlImage}) => {
 });
 
 containerArticule.innerHTML = html;
+
+
+//Cart button, showing the added to cart
+
+const cartButton = document.querySelector("#cart-button");
+const addedToCart = document.querySelector("#added-to-cart")
+
+cartButton.addEventListener("click", () => {
+    addedToCart.classList.toggle("added-to-cart-show");
+})
+
+
