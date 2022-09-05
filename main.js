@@ -119,17 +119,25 @@ addedToCartBody.addEventListener("click", (e) => {
     if (e.target.classList.contains("plus-icon")) {
         const idArticule = +e.target.parentElement.parentElement.id;
         cart[idArticule].amount++;
-        
-        
-
+            if (cart[idArticule].amount > cart[idArticule].Stock) {
+                alert("Sorry, that is all we have in Stock for this item.!");
+                cart[idArticule].amount--;
+            }
+        /*cart[idArticule].price * cart[idArticule].amount; How do I get this to show in the item?*/
     };
     if (e.target.classList.contains("minus-icon")) {
         const idArticule = +e.target.parentElement.parentElement.id;
         cart[idArticule].amount--;
+            if (cart[idArticule].amount === 0) {
+                delete cart[idArticule];
+            }
     };
     if (e.target.classList.contains("trash-icon")) {
-        console.log("Le diste a la Basura");
+        const idArticule = +e.target.parentElement.parentElement.id;
+        delete cart[idArticule];
     };
+
+    
     
     showingAddedItems()
 });
