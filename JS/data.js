@@ -28,21 +28,23 @@ export const dataDB = [
         Stock:15,
         price: 6,
     },
-    /*
+
     {
         id: 5,
-        name: ,
-        urlImage:,
-        Stock:,
-        price: ,
+        name: "P2",
+        urlImage: "/images/P2.jpeg",
+        Stock: 8,
+        price: 10,
     },
+
     {
         id: 6,
-        name: ,
-        urlImage:,
-        Stock:,
-        price: ,
+        name: "P3",
+        urlImage:"/images/P3.jpeg",
+        Stock: 9,
+        price: 20,
     },
+/*
     {
         id: 7,
         name: ,
