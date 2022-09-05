@@ -149,7 +149,8 @@ a {
       
       .slide img{
         width: 100%;
-        height: 80%;
+        height: 75%;
+        border-radius: 10%;
       }
       
       /*css for manual slide navigation*/
@@ -157,7 +158,7 @@ a {
       .navigation-manual{
         position: absolute;
         width: 50%;
-        margin-top: -12%;
+        margin-top: -20%;
         display: flex;
         justify-content: center;
       }
@@ -285,4 +286,12 @@ a {
 
     .added-to-cart-show {
       transform: translateX(0);
+    }
+
+    .added-to-cart-body {
+
+    }
+
+    .added-to-cart-total{
+
     }
