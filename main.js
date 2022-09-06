@@ -114,18 +114,14 @@ function showingAddedItems() {
 
     
         let totaltext = "";
-        let finaltotal = 0;
-        addedItemsArray.forEach(({ price, amount}) => {
-        let subtotal = price*amount;
-        finaltotal += subtotal;
-        totaltext += `<h2>Total: $<span id="total">${finaltotal}</span></h2>`;
-        })
-
-        carttotal.innerHTML= totaltext;
-
+        let totalnumber = 0;
+        addedItemsArray.forEach(({ price, amount}) => { 
+        let subtotalnumber = price*amount;
+        totalnumber += subtotalnumber;
         
-    
-    
+        })
+        totaltext += `<h2>Total: $<span id="total">${totalnumber}</span></h2>`;
+        carttotal.innerHTML= totaltext;
     
     
 }
