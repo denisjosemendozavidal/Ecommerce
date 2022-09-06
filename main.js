@@ -8,7 +8,7 @@ const Nav = document.querySelector("#nav-elements-grandpa");
 
 Burger.addEventListener("click", function () {
     Nav.classList.toggle("nav-elements-grandpa-show");
-    console.log("click");
+    
 });
 
 //Slider
@@ -39,13 +39,11 @@ dataDB.forEach(({id, name, price, Stock, urlImage}) => {
         </div>
         <div class="articule-body" id="${id}">
             <h2 class="articule-body-title">${name}</h2>
-            <p>Price: ${price}</p>
+            <p>Price:$ ${price}</p>
             <p>Stock: ${Stock}</p>
             <button class="btn btn-add">Add to Cart</button>
         </div>
     </div>`
-
-    
 });
 
 containerArticule.innerHTML = html;
@@ -72,7 +70,7 @@ containerArticule.addEventListener("click", (e)=>{
         const findArticule = dataDB.find((articule) => articule.id === IdArticule);
         
         if (cart[IdArticule]) {
-            cart[IdArticule].amount++;
+            alert("This Item is already added to the cart, please click on the shopping cart icon to add more units of this Item.")
         } else {
             cart[IdArticule] = findArticule;
             cart[IdArticule].amount= 1;  
@@ -97,7 +95,7 @@ function showingAddedItems() {
                 <div class="added-to-cart-item-options" id="${id}">
                     <span id="amount">Added to cart: ${amount}</span>
                     <span id="Stock">In stock: ${Stock-amount}</span>
-                    <span id="Subtotal">Subtotal:$ ${price*amount}</span>
+                    <span>Subtotal:$ <span id="Subtotal">${price*amount}</span></span>
                     <div class="added-to-cart-item-options-icons">
                         <img class="plus-icon" src="/images/plus.svg" alt="Plus-icon">
                         <img class="minus-icon" src="/images/minus.svg" alt="Minus-icon">
@@ -107,11 +105,15 @@ function showingAddedItems() {
             </div>
         `
     });
+    addedToCartBody.innerHTML = html; //This is what shows in the cart.
     
-    addedToCartBody.innerHTML = html;
+   
+
+    
 }
 
 //Substracting, adding and/or eliminating Items from the cart
+
 
 addedToCartBody.addEventListener("click", (e) => {
     
@@ -123,7 +125,6 @@ addedToCartBody.addEventListener("click", (e) => {
                 alert("Sorry, that is all we have in Stock for this item.!");
                 cart[idArticule].amount--;
             }
-        /*cart[idArticule].price * cart[idArticule].amount; How do I get this to show in the item?*/
     };
     if (e.target.classList.contains("minus-icon")) {
         const idArticule = +e.target.parentElement.parentElement.id;
@@ -136,11 +137,25 @@ addedToCartBody.addEventListener("click", (e) => {
         const idArticule = +e.target.parentElement.parentElement.id;
         delete cart[idArticule];
     };
-
+    
     
     
     showingAddedItems()
+    
+
 });
+
+//Adding to the total. 
+
+
+
+
+
+
+
+
+
+
 
 
 
