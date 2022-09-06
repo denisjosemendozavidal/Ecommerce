@@ -95,7 +95,7 @@ function showingAddedItems() {
                 <div class="added-to-cart-item-options" id="${id}">
                     <span id="amount">Added to cart: ${amount}</span>
                     <span id="Stock">In stock: ${Stock-amount}</span>
-                    <span>Subtotal:$ <span id="Subtotal">${price*amount}</span></span>
+                    <span>Subtotal:$ <span class="Subtotal">${price*amount}</span></span>
                     <div class="added-to-cart-item-options-icons">
                         <img class="plus-icon" src="/images/plus.svg" alt="Plus-icon">
                         <img class="minus-icon" src="/images/minus.svg" alt="Minus-icon">
@@ -107,8 +107,26 @@ function showingAddedItems() {
     });
     addedToCartBody.innerHTML = html; //This is what shows in the cart.
     
-   
+   //Getting the total price
+    
 
+    const carttotal = document.querySelector(".added-to-cart-total")
+
+    
+        let totaltext = "";
+        let finaltotal = 0;
+        addedItemsArray.forEach(({ price, amount}) => {
+        let subtotal = price*amount;
+        finaltotal += subtotal;
+        totaltext += `<h2>Total: $<span id="total">${finaltotal}</span></h2>`;
+        })
+
+        carttotal.innerHTML= totaltext;
+
+        
+    
+    
+    
     
 }
 
