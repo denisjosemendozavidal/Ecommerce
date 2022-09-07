@@ -167,7 +167,14 @@ addedToCartBody.addEventListener("click", (e) => {
 
 });
 
-//Setting up Mixitup
+//Adding effects to .identity
+
+let changingtext = new Typed (".identity", {
+    strings: ["Hi there, nice having you here, I'm lumus, and this is my story. I was born, (not too long ago lol), from the love of my parents, who thought that my excentricity and tie dye based style would light the world up with a little bit of love, hapiness and understanding. I also love music and my go to for a great evening is always watching series over going to parties. Please reach out to me, I want to hear from you."],
+    typeSpeed: 50,
+    backSpeed: 50, 
+    loop: true,
+})
 
 
 
