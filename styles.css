@@ -10,6 +10,7 @@
     --black:#000;
     --fucia: #F07DEA;
     --darwhite: #EEEEEE;
+    --red:red; 
 }
 
 body {
@@ -96,6 +97,15 @@ a {
               .cart-button {
                   z-index: 1000;
               }
+
+                  .cart-button > .alertbadge {
+                    display: flex;
+                    justify-content: center;
+                    background-color: var(--red);
+                    border-radius: 50%;
+                    color: var(--darwhite);
+                  }
+
                   .cart-button:hover {
                       background-color: var(--fucia);
                       border-radius: 50%;

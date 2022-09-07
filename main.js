@@ -124,6 +124,14 @@ function showingAddedItems() {
         carttotal.innerHTML= totaltext;
     
     
+    //Adding alert badge on shopping cart.
+
+    const alertBadgeContainer = document.querySelector(".alertbadge")
+    const amountOfAddedItems = addedToCartBody.childElementCount;
+    const alertBadgeContent = `<p>${amountOfAddedItems}</p>`;
+
+    alertBadgeContainer.innerHTML = alertBadgeContent;
+
 }
 
 //Substracting, adding and/or eliminating Items from the cart
@@ -159,7 +167,8 @@ addedToCartBody.addEventListener("click", (e) => {
 
 });
 
-//Adding to the total. 
+
+
 
 
 
