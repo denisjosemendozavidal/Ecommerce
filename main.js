@@ -167,6 +167,12 @@ addedToCartBody.addEventListener("click", (e) => {
 
 });
 
+//Setting up Mixitup
+
+
+
+
+
 
 
 

@@ -250,7 +250,7 @@ a {
   /*Catalog*/
 
   .filters {
-    display: flex;
+    display: none;
     justify-content: space-evenly;
     width: 100%;
     padding-bottom: 3%;
@@ -292,7 +292,72 @@ a {
           background-color: #256D85;
           color: #fff;
         }
+
+  /*About me and Contact*/
+
+    .aboutMeAndContact {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      gap: 5%;
+      padding-top: 3%;
+    }
   
+        .aboutme {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap:3%;
+          padding-top: 3%;
+          width: 50%;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          padding-bottom: 5%;
+          border-radius: 20%;
+          align-content: center;
+          justify-content: center;
+        }
+
+            .aboutme > h2 {
+
+            }
+
+            .aboutme > p {
+              text-align: center;
+              line-height: 200%;
+              padding: 2%;
+            }
+
+        .contact {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap:3%;
+          padding-top: 3%;
+          width: 50%;
+          box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+          padding-bottom: 5%;
+          border-radius: 20%;
+        }
+
+            .contact > a {
+              padding: 3%;
+              
+            }
+
+            .contact > a > img {
+              width: 15rem;
+              height: 10rem;
+              border-radius: 20%;
+              box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+            }
+
+              .contact > a > img:hover {
+                box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 1.15);
+              }
+
+
+
+
   /*Content of the cart*/
   
     .added-to-cart {
@@ -900,7 +965,7 @@ a {
   /*Catalog*/
 
   .filters {
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
@@ -922,6 +987,7 @@ a {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1%;
+    
   }
       .articule {
         padding: 5% 10%;
@@ -948,6 +1014,71 @@ a {
           background-color: #256D85;
           color: #fff;
         }
+
+  /*About me and Contact*/
+
+    .aboutMeAndContact {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: space-between;
+      padding-top: 50%;
+      gap: 10%;
+      
+    }
+
+          .aboutme {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:3%;
+            padding-top: 3%;
+            width: 100%;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+            padding-bottom: 5%;
+            border-radius: 20%;
+            align-content: center;
+            justify-content: center;
+          }
+
+              .aboutme > h2 {
+
+              }
+
+              .aboutme > p {
+                text-align: center;
+                line-height: 200%;
+                padding: 2%;
+              }
+
+          .contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap:3%;
+            padding-top: 3%;
+            width: 100%;
+            box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+            padding-bottom: 5%;
+            border-radius: 20%;
+          }
+
+              .contact > a {
+                padding: 3%;
+                
+              }
+
+              .contact > a > img {
+                width: 15rem;
+                height: 10rem;
+                border-radius: 20%;
+                box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+              }
+
+                .contact > a > img:hover {
+                  box-shadow: 0 0.5rem 1rem  rgba(0, 0, 0, 1.15);
+                }
 
   /*Content of the cart*/
 
