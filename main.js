@@ -31,9 +31,9 @@ const containerArticule = document.querySelector(".product-list-container");
 
 let html = "";
 
-dataDB.forEach(({id, name, price, Stock, urlImage}) => {
+dataDB.forEach(({id, name, price, Stock, urlImage, type}) => {
     html += 
-    `<div class="articule">
+    `<div class="articule all ${type}">
         <div class="articule-img">
             <img src="${urlImage}" alt="">
         </div>
@@ -47,6 +47,9 @@ dataDB.forEach(({id, name, price, Stock, urlImage}) => {
 });
 
 containerArticule.innerHTML = html;
+
+ 
+
 
 
 //Cart button, showing the added to cart
@@ -120,7 +123,9 @@ function showingAddedItems() {
         totalnumber += subtotalnumber;
         
         })
-        totaltext += `<h2>Total: $<span id="total">${totalnumber}</span></h2>`;
+        totaltext += `
+        <h2>Total: $<span id="total">${totalnumber}</span></h2>
+        <button class="buynow" id="buynow">Buy now</button> `;
         carttotal.innerHTML= totaltext;
     
     
@@ -175,6 +180,21 @@ let changingtext = new Typed (".identity", {
     backSpeed: 50, 
     loop: true,
 })
+
+
+//Testing adding filters;
+
+
+    
+        
+        
+        
+    
+    
+
+
+
+
 
 
 

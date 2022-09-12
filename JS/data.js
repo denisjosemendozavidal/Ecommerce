@@ -6,6 +6,7 @@ export const dataDB = [
         urlImage: "./images/P1.jpeg",
         Stock: 7,
         price: 5,
+        type: "couplesDesign"
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ export const dataDB = [
         urlImage:"/images/P11.jpeg",
         Stock:8,
         price: 7,
+        type: "couplesDesign"
     },
     {
         id: 3,
@@ -20,6 +22,7 @@ export const dataDB = [
         urlImage:"/images/P10.jpeg",
         Stock: 12,
         price: 8,
+        type: "newest"
     },
     {
         id: 4,
@@ -27,6 +30,7 @@ export const dataDB = [
         urlImage: "/images/P15.jpeg",
         Stock:15,
         price: 6,
+        type: "newest"
     },
 
     {
@@ -35,6 +39,7 @@ export const dataDB = [
         urlImage: "/images/P2.jpeg",
         Stock: 8,
         price: 10,
+        type: "newest"
     },
 
     {
@@ -43,6 +48,7 @@ export const dataDB = [
         urlImage:"/images/P3.jpeg",
         Stock: 9,
         price: 20,
+        type: "promotions"
     },
 /*
     {

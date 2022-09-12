@@ -71,29 +71,25 @@
                     <!--manual navigation end-->
                   </div>
                   <!--image slider end-->
-                </div>
+            </div>
                 <!--Slider ends here-->
 
 <!--Catalogue-->
 
           <h2 id="products">Our Catalogue</h2>
           <div class="filters">
-            <h4 class=".allProducts">All Products</h4>
-            <h4 class=".newest">Newest</h4>
-            <h4 class=".couplesDesigns">Couples Designs</h4>
-            <h4 class=".sweaters">Sweaters</h4>
-            <h4 class=".promotions">Promotions</h4>
+            <h4 data-filter=".all">All Products</h4>
+            <h4 data-filter=".newest">Newest</h4>
+            <h4 data-filter=".couplesDesign">Couples Designs</h4>
+            <h4 data-filter=".sweaters">Sweaters</h4>
+            <h4 data-filter=".promotions">Promotions</h4>
           </div>
-          <div class="product-list-container" id="products-list-container">
+          <div class="product-list-container" id="product-list-container">
+            
           </div>
+
 
 <!--Catalogue ends here-->
-
-<!--Adding filters for the Catalogue-->
-
-          
-
-<!--Filters end here-->
 
 <!--Shopping cart-->
 
@@ -124,7 +120,20 @@
           </section>
    
     </div>
-   
+    
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.js" integrity="sha512-fuxK9KrfYYxsXOm+VTYLEX3vOKymX2CDP+X1q0vsTwe9LPyJBSC3LXPu79ZNZiNCFrSzzMklmp5bU9Da/1TQEw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script>
+          mixitup(".product-list-container", {
+              selectors: {
+                  target: ".articule",
+              },
+              animation: {
+                  duration: 300,
+              }
+          });
+      </script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="/main.js" type="module"></script>
     
