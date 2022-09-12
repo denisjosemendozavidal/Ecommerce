@@ -19,7 +19,7 @@ body {
     flex-direction: column;
     align-items: center;
     scroll-behavior: smooth;
-    background: linear-gradient(180deg,#048ef0,#9046bf,#fa87b5,#f15481);
+    background: linear-gradient(90deg,#048ef0,#9046bf,#fa87b5,#f15481);
 }
 
 h2 {
